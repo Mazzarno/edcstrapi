@@ -98,7 +98,6 @@ coverage
 ############################
 # Strapi
 ############################
-yarn.lock
 .env
 license.txt
 exports
