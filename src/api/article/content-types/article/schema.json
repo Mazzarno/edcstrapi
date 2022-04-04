@@ -60,6 +60,19 @@
         "videos",
         "audios"
       ]
+    },
+    "content2": {
+      "type": "richtext"
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
