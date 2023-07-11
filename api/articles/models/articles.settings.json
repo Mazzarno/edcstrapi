@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "articles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "required": true,
+      "default": "TITRE"
+    },
+    "Avatar": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Auteur": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Contenue1": {
+      "type": "richtext",
+      "required": true
+    },
+    "Media_contenu": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Contenu2": {
+      "type": "richtext"
+    },
+    "Media_contenu2": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Contenu3": {
+      "type": "richtext"
+    },
+    "URL_YT": {
+      "type": "string"
+    },
+    "Publication": {
+      "type": "date",
+      "default": "2023-07-11T10:00:00.000Z",
+      "required": true
+    },
+    "categories": {
+      "via": "articles",
+      "collection": "categories"
+    }
+  }
+}
